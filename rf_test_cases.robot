@@ -77,9 +77,10 @@ Test GET
     Execute Javascript	window.open()
     Switch Window	locator=NEW
     Go To	chrome-extension://lhobafahddgcelffkeicbaginigeejlf/data/popup/popup.html
+    Wait Until Page Contains Element  xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td
     Click Element  xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td
     Close window
-    Switch Window  locator=main
+    Switch Window  main
 
 
     Wait Until Page Contains Element  xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a  timeout=20s
