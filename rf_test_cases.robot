@@ -10,7 +10,7 @@ Suite Setup    Start setup
 *** Test Cases ***
 NIC config before setting NIC
     [Tags]  Ping vms
-    Sleep  50s 	Waiting for Vms to boot up. 	
+    Wait Until Keyword Succeeds  1min   5s   Are booted	
     ${result} =  Run Process  C:\\Users\\oliver.uhlar\\Desktop\\Projects\\ping_vms\\.venv\\Scripts\\python.exe  print_nic.py  runserver
     Should Be Empty  ${result.stderr}  msg=${result.stderr}
     Log  ${result.stdout}
@@ -169,6 +169,10 @@ Test GET after DELETE
     Close Window
 
 *** Keywords ***
+Are booted
+    ${result} =  Run Process  C:\\Users\\oliver.uhlar\\Desktop\\Projects\\ping_vms\\.venv\\Scripts\\python.exe  print_nic.py  runserver
+    Should Be Empty  ${result.stderr}  msg=${result.stderr}
+    
 Start setup
     Start Process  C:\\Users\\oliver.uhlar\\Desktop\\Projects\\postman_wamp\\venv\\Scripts\\python.exe  app.py  runserver
     Start Process  wamp.bat
