@@ -51,7 +51,6 @@ NIC config after setting NIC
 
 
 
-
 Graph temperature BB
     [Tags]  Plotly
     ${result} =  Run Process  C:\\Users\\oliver.uhlar\\Desktop\\Projects\\plotly_graphs\\venv\\Scripts\\python.exe  temperature_lch.py  runserver
