@@ -3,9 +3,11 @@ Library  OperatingSystem
 Library  Process
 Library  Collections
 Library  SeleniumLibrary
+Library  ./cypto_password.py
 Suite Setup    Start setup
-*** Variables ***
 
+*** Variables ***
+${hash_pass}  gAAAAABf3JFhmqyyb_6QwHoo7Jm-m-KqFisG9QAgRa2NvElHp9ts79tnLq3B9ijyFEaSn8yXlnutyc7Ab8hPfpOQrbFGZ3lSsw==
 
 *** Test Cases ***
 NIC config before setting NIC
@@ -86,7 +88,8 @@ Test GET
     Click Element  xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a
     Wait Until Page Contains Element  id:username  timeout=20s
     Input Text  id:username  mekkyzbirka@gmail.com
-    Input Text  id:password  Test@12345
+    ${paswd} =	 decoding  ${hash_pass}
+    Input Text  id:password  ${paswd}
 
     Wait Until Page Contains Element  xpath://*[@id="sign-in-btn"]  timeout=20s
     Click Element  xpath://*[@id="sign-in-btn"]

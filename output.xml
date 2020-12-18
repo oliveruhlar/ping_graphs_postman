@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201214 10:56:24.302" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201218 19:17:29.326" rpa="false">
 <suite id="s1" name="Rf Test Cases" source="C:\Users\oliver.uhlar\Desktop\Projects\ping_graphs_postman\rf_test_cases.robot">
 <kw name="Start setup" type="setup">
 <kw name="Start Process" library="Process">
@@ -9,18 +9,18 @@
 <arg>app.py</arg>
 <arg>runserver</arg>
 </arguments>
-<msg timestamp="20201214 10:56:24.716" level="INFO">Starting process:
+<msg timestamp="20201218 19:17:29.513" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\postman_wamp\venv\Scripts\python.exe app.py runserver</msg>
-<status status="PASS" starttime="20201214 10:56:24.716" endtime="20201214 10:56:24.719"></status>
+<status status="PASS" starttime="20201218 19:17:29.513" endtime="20201218 19:17:29.516"></status>
 </kw>
 <kw name="Start Process" library="Process">
 <doc>Starts a new process on background.</doc>
 <arguments>
 <arg>wamp.bat</arg>
 </arguments>
-<msg timestamp="20201214 10:56:24.720" level="INFO">Starting process:
+<msg timestamp="20201218 19:17:29.516" level="INFO">Starting process:
 wamp.bat</msg>
-<status status="PASS" starttime="20201214 10:56:24.719" endtime="20201214 10:56:24.729"></status>
+<status status="PASS" starttime="20201218 19:17:29.516" endtime="20201218 19:17:29.519"></status>
 </kw>
 <kw name="Start Process" library="Process">
 <doc>Starts a new process on background.</doc>
@@ -32,9 +32,9 @@ wamp.bat</msg>
 <arg>--type</arg>
 <arg>headless</arg>
 </arguments>
-<msg timestamp="20201214 10:56:24.729" level="INFO">Starting process:
+<msg timestamp="20201218 19:17:29.520" level="INFO">Starting process:
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm ubuntu_1 {c0382caa-6ce6-4fd3-aab4-77ea96bff7f7} --type headless</msg>
-<status status="PASS" starttime="20201214 10:56:24.729" endtime="20201214 10:56:24.731"></status>
+<status status="PASS" starttime="20201218 19:17:29.519" endtime="20201218 19:17:29.522"></status>
 </kw>
 <kw name="Start Process" library="Process">
 <doc>Starts a new process on background.</doc>
@@ -46,11 +46,11 @@ wamp.bat</msg>
 <arg>--type</arg>
 <arg>headless</arg>
 </arguments>
-<msg timestamp="20201214 10:56:24.732" level="INFO">Starting process:
+<msg timestamp="20201218 19:17:29.523" level="INFO">Starting process:
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm ubuntu_2 {c0382caa-6ce6-4fd3-aab4-77ea96bff7f7} --type headless</msg>
-<status status="PASS" starttime="20201214 10:56:24.731" endtime="20201214 10:56:24.734"></status>
+<status status="PASS" starttime="20201218 19:17:29.522" endtime="20201218 19:17:29.525"></status>
 </kw>
-<status status="PASS" starttime="20201214 10:56:24.716" endtime="20201214 10:56:24.734"></status>
+<status status="PASS" starttime="20201218 19:17:29.513" endtime="20201218 19:17:29.525"></status>
 </kw>
 <test id="s1-t1" name="NIC config before setting NIC">
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
@@ -71,12 +71,12 @@ wamp.bat</msg>
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:56:24.737" level="INFO">Starting process:
+<msg timestamp="20201218 19:17:29.529" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:56:24.739" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:56:46.223" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:56:46.223" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
-<status status="PASS" starttime="20201214 10:56:24.737" endtime="20201214 10:56:46.223"></status>
+<msg timestamp="20201218 19:17:29.532" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:17:50.947" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:17:50.947" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" starttime="20201218 19:17:29.529" endtime="20201218 19:17:50.947"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -84,8 +84,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:56:46.224" level="INFO">Length is 942</msg>
-<msg timestamp="20201214 10:56:46.225" level="FAIL">Traceback (most recent call last):
+<msg timestamp="20201218 19:17:50.948" level="INFO">Length is 942</msg>
+<msg timestamp="20201218 19:17:50.948" level="FAIL">Traceback (most recent call last):
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_graphs_postman\print_nic.py", line 24, in &lt;module&gt;
     vm_u.connect('192.168.56.2',port=22, username='oliveruhlar', password='', key_filename='w_rsa')
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in connect
@@ -95,9 +95,9 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in &lt;lambda&gt;
     retry_on_signal(lambda: sock.connect(addr))
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</msg>
-<status status="FAIL" starttime="20201214 10:56:46.224" endtime="20201214 10:56:46.225"></status>
+<status status="FAIL" starttime="20201218 19:17:50.947" endtime="20201218 19:17:50.948"></status>
 </kw>
-<status status="FAIL" starttime="20201214 10:56:24.737" endtime="20201214 10:56:46.226"></status>
+<status status="FAIL" starttime="20201218 19:17:29.528" endtime="20201218 19:17:50.948"></status>
 </kw>
 <kw name="Are booted">
 <kw name="Run Process" library="Process">
@@ -110,12 +110,12 @@ TimeoutError: [WinError 10060] A connection attempt failed because the connected
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:56:56.228" level="INFO">Starting process:
+<msg timestamp="20201218 19:18:00.950" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:56:56.234" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:57:17.796" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:57:17.797" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
-<status status="PASS" starttime="20201214 10:56:56.228" endtime="20201214 10:57:17.797"></status>
+<msg timestamp="20201218 19:18:00.953" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:18:22.362" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:18:22.362" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" starttime="20201218 19:18:00.949" endtime="20201218 19:18:22.362"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -123,8 +123,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:57:17.799" level="INFO">Length is 942</msg>
-<msg timestamp="20201214 10:57:17.800" level="FAIL">Traceback (most recent call last):
+<msg timestamp="20201218 19:18:22.362" level="INFO">Length is 942</msg>
+<msg timestamp="20201218 19:18:22.362" level="FAIL">Traceback (most recent call last):
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_graphs_postman\print_nic.py", line 24, in &lt;module&gt;
     vm_u.connect('192.168.56.2',port=22, username='oliveruhlar', password='', key_filename='w_rsa')
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in connect
@@ -134,9 +134,9 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in &lt;lambda&gt;
     retry_on_signal(lambda: sock.connect(addr))
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</msg>
-<status status="FAIL" starttime="20201214 10:57:17.797" endtime="20201214 10:57:17.800"></status>
+<status status="FAIL" starttime="20201218 19:18:22.362" endtime="20201218 19:18:22.362"></status>
 </kw>
-<status status="FAIL" starttime="20201214 10:56:56.227" endtime="20201214 10:57:17.800"></status>
+<status status="FAIL" starttime="20201218 19:18:00.949" endtime="20201218 19:18:22.363"></status>
 </kw>
 <kw name="Are booted">
 <kw name="Run Process" library="Process">
@@ -149,12 +149,12 @@ TimeoutError: [WinError 10060] A connection attempt failed because the connected
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:57:27.805" level="INFO">Starting process:
+<msg timestamp="20201218 19:18:32.366" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:57:27.813" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:57:49.244" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:57:49.244" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
-<status status="PASS" starttime="20201214 10:57:27.804" endtime="20201214 10:57:49.244"></status>
+<msg timestamp="20201218 19:18:32.371" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:18:53.824" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:18:53.824" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<status status="PASS" starttime="20201218 19:18:32.366" endtime="20201218 19:18:53.824"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -162,8 +162,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:57:49.245" level="INFO">Length is 942</msg>
-<msg timestamp="20201214 10:57:49.245" level="FAIL">Traceback (most recent call last):
+<msg timestamp="20201218 19:18:53.825" level="INFO">Length is 942</msg>
+<msg timestamp="20201218 19:18:53.825" level="FAIL">Traceback (most recent call last):
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_graphs_postman\print_nic.py", line 24, in &lt;module&gt;
     vm_u.connect('192.168.56.2',port=22, username='oliveruhlar', password='', key_filename='w_rsa')
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in connect
@@ -173,9 +173,9 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
   File "C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\lib\site-packages\paramiko\client.py", line 349, in &lt;lambda&gt;
     retry_on_signal(lambda: sock.connect(addr))
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond</msg>
-<status status="FAIL" starttime="20201214 10:57:49.244" endtime="20201214 10:57:49.245"></status>
+<status status="FAIL" starttime="20201218 19:18:53.824" endtime="20201218 19:18:53.825"></status>
 </kw>
-<status status="FAIL" starttime="20201214 10:57:27.802" endtime="20201214 10:57:49.246"></status>
+<status status="FAIL" starttime="20201218 19:18:32.365" endtime="20201218 19:18:53.825"></status>
 </kw>
 <kw name="Are booted">
 <kw name="Run Process" library="Process">
@@ -188,12 +188,12 @@ TimeoutError: [WinError 10060] A connection attempt failed because the connected
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:57:59.249" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:03.829" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:57:59.255" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:00.256" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:00.256" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:57:59.248" endtime="20201214 10:58:00.256"></status>
+<msg timestamp="20201218 19:19:03.837" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:04.758" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:04.759" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:03.828" endtime="20201218 19:19:04.759"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -201,12 +201,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:00.257" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:00.257" endtime="20201214 10:58:00.257"></status>
+<msg timestamp="20201218 19:19:04.759" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:04.759" endtime="20201218 19:19:04.759"></status>
 </kw>
-<status status="PASS" starttime="20201214 10:57:59.247" endtime="20201214 10:58:00.257"></status>
+<status status="PASS" starttime="20201218 19:19:03.826" endtime="20201218 19:19:04.760"></status>
 </kw>
-<status status="PASS" starttime="20201214 10:56:24.736" endtime="20201214 10:58:00.257"></status>
+<status status="PASS" starttime="20201218 19:17:29.528" endtime="20201218 19:19:04.760"></status>
 </kw>
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
@@ -218,12 +218,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:00.259" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:04.761" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:58:00.261" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:01.062" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:01.062" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:00.259" endtime="20201214 10:58:01.062"></status>
+<msg timestamp="20201218 19:19:04.763" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:05.562" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:05.562" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:04.760" endtime="20201218 19:19:05.562"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -231,15 +231,15 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:01.064" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:01.063" endtime="20201214 10:58:01.064"></status>
+<msg timestamp="20201218 19:19:05.563" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:05.563" endtime="20201218 19:19:05.563"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:01.065" level="INFO">
+<msg timestamp="20201218 19:19:05.564" level="INFO">
  VM n1
 +----------+--------------+
 | NIC name |     IPv4     |
@@ -255,12 +255,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 |  enp0s3  |  10.0.2.15   |
 |  enp0s8  | 192.168.56.3 |
 +----------+--------------+</msg>
-<status status="PASS" starttime="20201214 10:58:01.065" endtime="20201214 10:58:01.065"></status>
+<status status="PASS" starttime="20201218 19:19:05.564" endtime="20201218 19:19:05.564"></status>
 </kw>
 <tags>
 <tag>Ping vms</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:56:24.735" endtime="20201214 10:58:01.065" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:17:29.526" endtime="20201218 19:19:05.565" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Ping VMs before setting NIC">
 <kw name="Run Process" library="Process">
@@ -273,12 +273,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:01.072" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:05.567" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_ping.py runserver</msg>
-<msg timestamp="20201214 10:58:01.075" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:25.852" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:25.852" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:01.071" endtime="20201214 10:58:25.852"></status>
+<msg timestamp="20201218 19:19:05.570" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:30.390" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:30.390" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:05.567" endtime="20201218 19:19:30.390"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -286,8 +286,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:25.854" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:25.853" endtime="20201214 10:58:25.854"></status>
+<msg timestamp="20201218 19:19:30.392" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:30.391" endtime="20201218 19:19:30.392"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -295,27 +295,27 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <arg>${result.stdout}</arg>
 <arg>100% packet loss</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:25.855" endtime="20201214 10:58:25.855"></status>
+<status status="PASS" starttime="20201218 19:19:30.392" endtime="20201218 19:19:30.393"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:25.856" level="INFO">
+<msg timestamp="20201218 19:19:30.394" level="INFO">
  ping VM n1 -&gt; VM n2 
 
-['PING 10.2.0.24 (10.2.0.24) 56(84) bytes of data.\n', '\n', '--- 10.2.0.24 ping statistics ---\n', '3 packets transmitted, 0 received, 100% packet loss, time 2048ms\n', '\n']
+['PING 10.2.0.24 (10.2.0.24) 56(84) bytes of data.\n', '\n', '--- 10.2.0.24 ping statistics ---\n', '3 packets transmitted, 0 received, 100% packet loss, time 2079ms\n', '\n']
 
  ping VM n2 -&gt; VM n1 
 
-['PING 10.2.0.23 (10.2.0.23) 56(84) bytes of data.\n', '\n', '--- 10.2.0.23 ping statistics ---\n', '3 packets transmitted, 0 received, 100% packet loss, time 2050ms\n', '\n']</msg>
-<status status="PASS" starttime="20201214 10:58:25.856" endtime="20201214 10:58:25.856"></status>
+['PING 10.2.0.23 (10.2.0.23) 56(84) bytes of data.\n', '\n', '--- 10.2.0.23 ping statistics ---\n', '3 packets transmitted, 0 received, 100% packet loss, time 2071ms\n', '\n']</msg>
+<status status="PASS" starttime="20201218 19:19:30.394" endtime="20201218 19:19:30.394"></status>
 </kw>
 <tags>
 <tag>Ping vms</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:01.071" endtime="20201214 10:58:25.857" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:05.566" endtime="20201218 19:19:30.395" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Set NIC">
 <kw name="Run Process" library="Process">
@@ -328,12 +328,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:25.862" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:30.398" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe set_nic.py runserver</msg>
-<msg timestamp="20201214 10:58:25.865" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:29.636" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:29.636" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:25.862" endtime="20201214 10:58:29.636"></status>
+<msg timestamp="20201218 19:19:30.401" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:34.125" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:34.125" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:30.397" endtime="20201218 19:19:34.125"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -341,8 +341,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe set_nic
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:29.638" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:29.637" endtime="20201214 10:58:29.638"></status>
+<msg timestamp="20201218 19:19:34.127" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:34.126" endtime="20201218 19:19:34.127"></status>
 </kw>
 <kw name="Run Process" library="Process">
 <doc>Runs a process and waits for it to complete.</doc>
@@ -354,12 +354,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe set_nic
 <assign>
 <var>${ifconfig}</var>
 </assign>
-<msg timestamp="20201214 10:58:29.639" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:34.128" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:58:29.642" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:30.565" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:30.565" level="INFO">${ifconfig} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:29.639" endtime="20201214 10:58:30.565"></status>
+<msg timestamp="20201218 19:19:34.131" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:34.936" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:34.937" level="INFO">${ifconfig} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:34.128" endtime="20201218 19:19:34.937"></status>
 </kw>
 <kw name="Should Contain X Times" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` ``count`` times.</doc>
@@ -369,8 +369,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>2</arg>
 <arg>msg=Setting NIC was unsuccessful</arg>
 </arguments>
-<msg timestamp="20201214 10:58:30.566" level="INFO">Item found from container 2 times.</msg>
-<status status="PASS" starttime="20201214 10:58:30.566" endtime="20201214 10:58:30.566"></status>
+<msg timestamp="20201218 19:19:34.938" level="INFO">Item found from container 2 times.</msg>
+<status status="PASS" starttime="20201218 19:19:34.938" endtime="20201218 19:19:34.938"></status>
 </kw>
 <kw name="Should Contain X Times" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` ``count`` times.</doc>
@@ -380,8 +380,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>2</arg>
 <arg>msg=Setting NIC was unsuccessful</arg>
 </arguments>
-<msg timestamp="20201214 10:58:30.567" level="INFO">Item found from container 2 times.</msg>
-<status status="PASS" starttime="20201214 10:58:30.567" endtime="20201214 10:58:30.567"></status>
+<msg timestamp="20201218 19:19:34.939" level="INFO">Item found from container 2 times.</msg>
+<status status="PASS" starttime="20201218 19:19:34.939" endtime="20201218 19:19:34.939"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -391,7 +391,7 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>msg=Setting NIC for VM n1 was unsuccessful</arg>
 <arg>values=False</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:30.568" endtime="20201214 10:58:30.568"></status>
+<status status="PASS" starttime="20201218 19:19:34.940" endtime="20201218 19:19:34.940"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -401,23 +401,23 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>msg=Setting NIC for VM n2 was unsuccessful</arg>
 <arg>values=False</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:30.569" endtime="20201214 10:58:30.569"></status>
+<status status="PASS" starttime="20201218 19:19:34.941" endtime="20201218 19:19:34.941"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:30.570" level="INFO">Setting NIC for VM n1 was successful
+<msg timestamp="20201218 19:19:34.942" level="INFO">Setting NIC for VM n1 was successful
 Setting NIC for VM n2 was successful</msg>
-<status status="PASS" starttime="20201214 10:58:30.569" endtime="20201214 10:58:30.570"></status>
+<status status="PASS" starttime="20201218 19:19:34.942" endtime="20201218 19:19:34.942"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${ifconfig.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:30.571" level="INFO">
+<msg timestamp="20201218 19:19:34.943" level="INFO">
  VM n1
 +----------+--------------+
 | NIC name |     IPv4     |
@@ -435,12 +435,12 @@ Setting NIC for VM n2 was successful</msg>
 |  enp0s8  | 192.168.56.3 |
 |  enp0s9  |  10.2.0.24   |
 +----------+--------------+</msg>
-<status status="PASS" starttime="20201214 10:58:30.570" endtime="20201214 10:58:30.571"></status>
+<status status="PASS" starttime="20201218 19:19:34.943" endtime="20201218 19:19:34.943"></status>
 </kw>
 <tags>
 <tag>Ping vms</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:25.861" endtime="20201214 10:58:30.572" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:30.396" endtime="20201218 19:19:34.943" critical="yes"></status>
 </test>
 <test id="s1-t4" name="Ping VMs after setting NIC">
 <kw name="Run Process" library="Process">
@@ -453,12 +453,12 @@ Setting NIC for VM n2 was successful</msg>
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:30.575" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:34.946" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_ping.py runserver</msg>
-<msg timestamp="20201214 10:58:30.577" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:35.230" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:35.231" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:30.574" endtime="20201214 10:58:35.231"></status>
+<msg timestamp="20201218 19:19:34.949" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:39.562" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:39.562" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:34.945" endtime="20201218 19:19:39.562"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -466,8 +466,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:35.232" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:35.232" endtime="20201214 10:58:35.232"></status>
+<msg timestamp="20201218 19:19:39.564" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:39.563" endtime="20201218 19:19:39.564"></status>
 </kw>
 <kw name="Should Contain X Times" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` ``count`` times.</doc>
@@ -477,28 +477,28 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <arg>2</arg>
 <arg>msg=Ping successful</arg>
 </arguments>
-<msg timestamp="20201214 10:58:35.234" level="INFO">Item found from container 2 times.</msg>
-<status status="PASS" starttime="20201214 10:58:35.233" endtime="20201214 10:58:35.234"></status>
+<msg timestamp="20201218 19:19:39.565" level="INFO">Item found from container 2 times.</msg>
+<status status="PASS" starttime="20201218 19:19:39.565" endtime="20201218 19:19:39.565"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:35.235" level="INFO">
+<msg timestamp="20201218 19:19:39.566" level="INFO">
  ping VM n1 -&gt; VM n2 
 
-['PING 10.2.0.24 (10.2.0.24) 56(84) bytes of data.\n', '64 bytes from 10.2.0.24: icmp_seq=1 ttl=64 time=1.21 ms\n', '64 bytes from 10.2.0.24: icmp_seq=2 ttl=64 time=1.16 ms\n', '64 bytes from 10.2.0.24: icmp_seq=3 ttl=64 time=1.33 ms\n', '\n', '--- 10.2.0.24 ping statistics ---\n', '3 packets transmitted, 3 received, 0% packet loss, time 2009ms\n', 'rtt min/avg/max/mdev = 1.156/1.230/1.328/0.072 ms\n']
+['PING 10.2.0.24 (10.2.0.24) 56(84) bytes of data.\n', '64 bytes from 10.2.0.24: icmp_seq=1 ttl=64 time=1.04 ms\n', '64 bytes from 10.2.0.24: icmp_seq=2 ttl=64 time=1.18 ms\n', '64 bytes from 10.2.0.24: icmp_seq=3 ttl=64 time=1.07 ms\n', '\n', '--- 10.2.0.24 ping statistics ---\n', '3 packets transmitted, 3 received, 0% packet loss, time 2003ms\n', 'rtt min/avg/max/mdev = 1.039/1.098/1.184/0.062 ms\n']
 
  ping VM n2 -&gt; VM n1 
 
-['PING 10.2.0.23 (10.2.0.23) 56(84) bytes of data.\n', '64 bytes from 10.2.0.23: icmp_seq=1 ttl=64 time=1.19 ms\n', '64 bytes from 10.2.0.23: icmp_seq=2 ttl=64 time=1.21 ms\n', '64 bytes from 10.2.0.23: icmp_seq=3 ttl=64 time=1.10 ms\n', '\n', '--- 10.2.0.23 ping statistics ---\n', '3 packets transmitted, 3 received, 0% packet loss, time 2028ms\n', 'rtt min/avg/max/mdev = 1.103/1.166/1.208/0.045 ms\n']</msg>
-<status status="PASS" starttime="20201214 10:58:35.234" endtime="20201214 10:58:35.235"></status>
+['PING 10.2.0.23 (10.2.0.23) 56(84) bytes of data.\n', '64 bytes from 10.2.0.23: icmp_seq=1 ttl=64 time=1.53 ms\n', '64 bytes from 10.2.0.23: icmp_seq=2 ttl=64 time=1.30 ms\n', '64 bytes from 10.2.0.23: icmp_seq=3 ttl=64 time=0.751 ms\n', '\n', '--- 10.2.0.23 ping statistics ---\n', '3 packets transmitted, 3 received, 0% packet loss, time 2018ms\n', 'rtt min/avg/max/mdev = 0.751/1.192/1.531/0.326 ms\n']</msg>
+<status status="PASS" starttime="20201218 19:19:39.566" endtime="20201218 19:19:39.566"></status>
 </kw>
 <tags>
 <tag>Ping vms</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:30.574" endtime="20201214 10:58:35.235" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:34.944" endtime="20201218 19:19:39.567" critical="yes"></status>
 </test>
 <test id="s1-t5" name="NIC config after setting NIC">
 <kw name="Run Process" library="Process">
@@ -511,12 +511,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe try_pin
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:35.239" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:39.571" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_nic.py runserver</msg>
-<msg timestamp="20201214 10:58:35.242" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:35.997" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:35.998" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:35.239" endtime="20201214 10:58:35.998"></status>
+<msg timestamp="20201218 19:19:39.574" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:40.397" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:40.397" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:39.570" endtime="20201218 19:19:40.397"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -524,15 +524,15 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:35.999" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:35.998" endtime="20201214 10:58:35.999"></status>
+<msg timestamp="20201218 19:19:40.398" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:40.398" endtime="20201218 19:19:40.398"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:36.000" level="INFO">
+<msg timestamp="20201218 19:19:40.399" level="INFO">
  VM n1
 +----------+--------------+
 | NIC name |     IPv4     |
@@ -550,7 +550,7 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 |  enp0s8  | 192.168.56.3 |
 |  enp0s9  |  10.2.0.24   |
 +----------+--------------+</msg>
-<status status="PASS" starttime="20201214 10:58:36.000" endtime="20201214 10:58:36.000"></status>
+<status status="PASS" starttime="20201218 19:19:40.399" endtime="20201218 19:19:40.399"></status>
 </kw>
 <kw name="Start Process" library="Process">
 <doc>Starts a new process on background.</doc>
@@ -560,9 +560,9 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>ubuntu_1</arg>
 <arg>poweroff</arg>
 </arguments>
-<msg timestamp="20201214 10:58:36.001" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:40.400" level="INFO">Starting process:
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm ubuntu_1 poweroff</msg>
-<status status="PASS" starttime="20201214 10:58:36.000" endtime="20201214 10:58:36.004"></status>
+<status status="PASS" starttime="20201218 19:19:40.400" endtime="20201218 19:19:40.402"></status>
 </kw>
 <kw name="Start Process" library="Process">
 <doc>Starts a new process on background.</doc>
@@ -572,14 +572,14 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <arg>ubuntu_2</arg>
 <arg>poweroff</arg>
 </arguments>
-<msg timestamp="20201214 10:58:36.005" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:40.403" level="INFO">Starting process:
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm ubuntu_2 poweroff</msg>
-<status status="PASS" starttime="20201214 10:58:36.004" endtime="20201214 10:58:36.008"></status>
+<status status="PASS" starttime="20201218 19:19:40.403" endtime="20201218 19:19:40.406"></status>
 </kw>
 <tags>
 <tag>Ping vms</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:35.238" endtime="20201214 10:58:36.008" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:39.570" endtime="20201218 19:19:40.406" critical="yes"></status>
 </test>
 <test id="s1-t6" name="Graph temperature BB">
 <kw name="Run Process" library="Process">
@@ -592,12 +592,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\ping_vms\.venv\Scripts\python.exe print_n
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:36.011" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:40.409" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe temperature_lch.py runserver</msg>
-<msg timestamp="20201214 10:58:36.015" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:36.798" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:36.798" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:36.011" endtime="20201214 10:58:36.798"></status>
+<msg timestamp="20201218 19:19:40.413" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:41.147" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:41.147" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:40.409" endtime="20201218 19:19:41.148"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -605,21 +605,21 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe tem
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:36.800" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:36.799" endtime="20201214 10:58:36.800"></status>
+<msg timestamp="20201218 19:19:41.149" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:41.149" endtime="20201218 19:19:41.150"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:36.800" level="INFO"></msg>
-<status status="PASS" starttime="20201214 10:58:36.800" endtime="20201214 10:58:36.800"></status>
+<msg timestamp="20201218 19:19:41.150" level="INFO"></msg>
+<status status="PASS" starttime="20201218 19:19:41.150" endtime="20201218 19:19:41.150"></status>
 </kw>
 <tags>
 <tag>Plotly</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:36.010" endtime="20201214 10:58:36.801" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:40.408" endtime="20201218 19:19:41.151" critical="yes"></status>
 </test>
 <test id="s1-t7" name="Graph networkx">
 <kw name="Run Process" library="Process">
@@ -632,12 +632,12 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe tem
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20201214 10:58:36.806" level="INFO">Starting process:
+<msg timestamp="20201218 19:19:41.154" level="INFO">Starting process:
 C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe networkx_plo.py runserver</msg>
-<msg timestamp="20201214 10:58:36.810" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20201214 10:58:38.283" level="INFO">Process completed.</msg>
-<msg timestamp="20201214 10:58:38.283" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:36.805" endtime="20201214 10:58:38.283"></status>
+<msg timestamp="20201218 19:19:41.156" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20201218 19:19:42.615" level="INFO">Process completed.</msg>
+<msg timestamp="20201218 19:19:42.616" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:41.153" endtime="20201218 19:19:42.616"></status>
 </kw>
 <kw name="Should Be Empty" library="BuiltIn">
 <doc>Verifies that the given item is empty.</doc>
@@ -645,21 +645,21 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe net
 <arg>${result.stderr}</arg>
 <arg>msg=${result.stderr}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:38.285" level="INFO">Length is 0</msg>
-<status status="PASS" starttime="20201214 10:58:38.284" endtime="20201214 10:58:38.285"></status>
+<msg timestamp="20201218 19:19:42.617" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20201218 19:19:42.617" endtime="20201218 19:19:42.617"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${result.stdout}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:38.285" level="INFO"></msg>
-<status status="PASS" starttime="20201214 10:58:38.285" endtime="20201214 10:58:38.286"></status>
+<msg timestamp="20201218 19:19:42.619" level="INFO"></msg>
+<status status="PASS" starttime="20201218 19:19:42.618" endtime="20201218 19:19:42.619"></status>
 </kw>
 <tags>
 <tag>Plotly + Networkx</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:36.803" endtime="20201214 10:58:38.286" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:41.153" endtime="20201218 19:19:42.619" critical="yes"></status>
 </test>
 <test id="s1-t8" name="Test GET">
 <kw name="Evaluate" library="BuiltIn">
@@ -671,8 +671,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe net
 <assign>
 <var>${chrome options}</var>
 </assign>
-<msg timestamp="20201214 10:58:38.293" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000012B9B787970&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:38.293" endtime="20201214 10:58:38.293"></status>
+<msg timestamp="20201218 19:19:42.626" level="INFO">${chrome options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027041D12E20&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:42.625" endtime="20201218 19:19:42.626"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -681,7 +681,7 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe net
 <arg>add_extension</arg>
 <arg>lhobafahddgcelffkeicbaginigeejlf.crx</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:38.295" endtime="20201214 10:58:38.295"></status>
+<status status="PASS" starttime="20201218 19:19:42.635" endtime="20201218 19:19:42.635"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -692,8 +692,8 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe net
 <assign>
 <var>${Options}</var>
 </assign>
-<msg timestamp="20201214 10:58:38.313" level="INFO">${Options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': ['Q3IyNAMAAAAcBQAAEqwECqYCMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj/u/XDdjlDyw7gHEtaaasZ9GdG8WOKAyJ...</msg>
-<status status="PASS" starttime="20201214 10:58:38.296" endtime="20201214 10:58:38.313"></status>
+<msg timestamp="20201218 19:19:42.638" level="INFO">${Options} = {'browserName': 'chrome', 'version': '', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': ['Q3IyNAMAAAAcBQAAEqwECqYCMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj/u/XDdjlDyw7gHEtaaasZ9GdG8WOKAyJ...</msg>
+<status status="PASS" starttime="20201218 19:19:42.636" endtime="20201218 19:19:42.638"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -703,67 +703,67 @@ C:\Users\oliver.uhlar\Desktop\Projects\plotly_graphs\venv\Scripts\python.exe net
 <arg>alias=main</arg>
 <arg>desired_capabilities=${Options}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:38.315" level="INFO">Opening browser 'Chrome' to base url 'https://www.postman.com/'.</msg>
-<status status="PASS" starttime="20201214 10:58:38.314" endtime="20201214 10:58:48.266"></status>
+<msg timestamp="20201218 19:19:42.639" level="INFO">Opening browser 'Chrome' to base url 'https://www.postman.com/'.</msg>
+<status status="PASS" starttime="20201218 19:19:42.638" endtime="20201218 19:19:51.063"></status>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <doc>Executes the given JavaScript code with possible arguments.</doc>
 <arguments>
 <arg>window.open()</arg>
 </arguments>
-<msg timestamp="20201214 10:58:48.267" level="INFO">Executing JavaScript:
+<msg timestamp="20201218 19:19:51.064" level="INFO">Executing JavaScript:
 window.open()
 Without any arguments.</msg>
-<status status="PASS" starttime="20201214 10:58:48.267" endtime="20201214 10:58:48.305"></status>
+<status status="PASS" starttime="20201218 19:19:51.064" endtime="20201218 19:19:51.123"></status>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <doc>Switches to browser window matching ``locator``.</doc>
 <arguments>
 <arg>locator=NEW</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:48.305" endtime="20201214 10:58:48.316"></status>
+<status status="PASS" starttime="20201218 19:19:51.124" endtime="20201218 19:19:51.133"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>chrome-extension://lhobafahddgcelffkeicbaginigeejlf/data/popup/popup.html</arg>
 </arguments>
-<msg timestamp="20201214 10:58:48.317" level="INFO">Opening url 'chrome-extension://lhobafahddgcelffkeicbaginigeejlf/data/popup/popup.html'</msg>
-<status status="PASS" starttime="20201214 10:58:48.317" endtime="20201214 10:58:50.470"></status>
+<msg timestamp="20201218 19:19:51.134" level="INFO">Opening url 'chrome-extension://lhobafahddgcelffkeicbaginigeejlf/data/popup/popup.html'</msg>
+<status status="PASS" starttime="20201218 19:19:51.134" endtime="20201218 19:19:53.244"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:50.470" endtime="20201214 10:58:50.485"></status>
+<status status="PASS" starttime="20201218 19:19:53.245" endtime="20201218 19:19:53.259"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td</arg>
 </arguments>
-<msg timestamp="20201214 10:58:50.486" level="INFO">Clicking element 'xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td'.</msg>
-<status status="PASS" starttime="20201214 10:58:50.485" endtime="20201214 10:58:50.550"></status>
+<msg timestamp="20201218 19:19:53.259" level="INFO">Clicking element 'xpath://html/body/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td'.</msg>
+<status status="PASS" starttime="20201218 19:19:53.259" endtime="20201218 19:19:53.298"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>extension.png</arg>
 </arguments>
-<msg timestamp="20201214 10:58:50.925" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="extension.png"&gt;&lt;img src="extension.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:58:50.551" endtime="20201214 10:58:50.925"></status>
+<msg timestamp="20201218 19:19:53.581" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="extension.png"&gt;&lt;img src="extension.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:19:53.299" endtime="20201218 19:19:53.582"></status>
 </kw>
 <kw name="Close Window" library="SeleniumLibrary">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20201214 10:58:50.927" endtime="20201214 10:58:50.957"></status>
+<status status="PASS" starttime="20201218 19:19:53.582" endtime="20201218 19:19:53.607"></status>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <doc>Switches to browser window matching ``locator``.</doc>
 <arguments>
 <arg>main</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:50.958" endtime="20201214 10:58:50.969"></status>
+<status status="PASS" starttime="20201218 19:19:53.607" endtime="20201218 19:19:53.620"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -771,15 +771,15 @@ Without any arguments.</msg>
 <arg>xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:50.969" endtime="20201214 10:58:50.991"></status>
+<status status="PASS" starttime="20201218 19:19:53.622" endtime="20201218 19:19:53.645"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a</arg>
 </arguments>
-<msg timestamp="20201214 10:58:50.997" level="INFO">Clicking element 'xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a'.</msg>
-<status status="PASS" starttime="20201214 10:58:50.997" endtime="20201214 10:58:51.110"></status>
+<msg timestamp="20201218 19:19:53.646" level="INFO">Clicking element 'xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a'.</msg>
+<status status="PASS" starttime="20201218 19:19:53.646" endtime="20201218 19:19:53.712"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -787,7 +787,7 @@ Without any arguments.</msg>
 <arg>id:username</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:51.112" endtime="20201214 10:58:52.406"></status>
+<status status="PASS" starttime="20201218 19:19:53.713" endtime="20201218 19:19:54.598"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -795,17 +795,27 @@ Without any arguments.</msg>
 <arg>id:username</arg>
 <arg>mekkyzbirka@gmail.com</arg>
 </arguments>
-<msg timestamp="20201214 10:58:52.409" level="INFO">Typing text 'mekkyzbirka@gmail.com' into text field 'id:username'.</msg>
-<status status="PASS" starttime="20201214 10:58:52.408" endtime="20201214 10:58:52.553"></status>
+<msg timestamp="20201218 19:19:54.599" level="INFO">Typing text 'mekkyzbirka@gmail.com' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20201218 19:19:54.599" endtime="20201218 19:19:54.664"></status>
+</kw>
+<kw name="Decoding" library="cypto_password">
+<arguments>
+<arg>${hash_pass}</arg>
+</arguments>
+<assign>
+<var>${paswd}</var>
+</assign>
+<msg timestamp="20201218 19:19:54.749" level="INFO">${paswd} = Test@12345</msg>
+<status status="PASS" starttime="20201218 19:19:54.673" endtime="20201218 19:19:54.749"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id:password</arg>
-<arg>Test@12345</arg>
+<arg>${paswd}</arg>
 </arguments>
-<msg timestamp="20201214 10:58:52.554" level="INFO">Typing text 'Test@12345' into text field 'id:password'.</msg>
-<status status="PASS" starttime="20201214 10:58:52.554" endtime="20201214 10:58:52.683"></status>
+<msg timestamp="20201218 19:19:54.751" level="INFO">Typing text 'Test@12345' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20201218 19:19:54.750" endtime="20201218 19:19:54.912"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -813,15 +823,15 @@ Without any arguments.</msg>
 <arg>xpath://*[@id="sign-in-btn"]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:52.685" endtime="20201214 10:58:52.703"></status>
+<status status="PASS" starttime="20201218 19:19:54.912" endtime="20201218 19:19:54.925"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://*[@id="sign-in-btn"]</arg>
 </arguments>
-<msg timestamp="20201214 10:58:52.705" level="INFO">Clicking element 'xpath://*[@id="sign-in-btn"]'.</msg>
-<status status="PASS" starttime="20201214 10:58:52.704" endtime="20201214 10:58:52.782"></status>
+<msg timestamp="20201218 19:19:54.926" level="INFO">Clicking element 'xpath://*[@id="sign-in-btn"]'.</msg>
+<status status="PASS" starttime="20201218 19:19:54.925" endtime="20201218 19:19:54.992"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -829,15 +839,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div/div[1]/aside/div/div[2]/a[1]/div/div</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:52.784" endtime="20201214 10:58:58.861"></status>
+<status status="PASS" starttime="20201218 19:19:54.992" endtime="20201218 19:19:59.795"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div/div[1]/aside/div/div[2]/a[1]/div/div</arg>
 </arguments>
-<msg timestamp="20201214 10:58:58.862" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div/div[1]/aside/div/div[2]/a[1]/div/div'.</msg>
-<status status="PASS" starttime="20201214 10:58:58.862" endtime="20201214 10:58:59.088"></status>
+<msg timestamp="20201218 19:19:59.797" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div/div[1]/aside/div/div[2]/a[1]/div/div'.</msg>
+<status status="PASS" starttime="20201218 19:19:59.797" endtime="20201218 19:19:59.916"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -845,15 +855,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/main/div/ol/li[2]/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:59.090" endtime="20201214 10:58:59.558"></status>
+<status status="PASS" starttime="20201218 19:19:59.917" endtime="20201218 19:20:00.175"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/main/div/ol/li[2]/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:58:59.561" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/main/div/ol/li[2]/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:58:59.561" endtime="20201214 10:58:59.659"></status>
+<msg timestamp="20201218 19:20:00.175" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/main/div/ol/li[2]/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:00.175" endtime="20201218 19:20:00.244"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -861,15 +871,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div/div[6]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:58:59.660" endtime="20201214 10:59:00.133"></status>
+<status status="PASS" starttime="20201218 19:20:00.244" endtime="20201218 19:20:00.596"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div/div[6]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:00.136" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div/div[6]'.</msg>
-<status status="PASS" starttime="20201214 10:59:00.135" endtime="20201214 10:59:00.188"></status>
+<msg timestamp="20201218 19:20:00.597" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[1]/div/div[6]'.</msg>
+<status status="PASS" starttime="20201218 19:20:00.596" endtime="20201218 19:20:00.989"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -877,15 +887,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[4]/div/div/div[2]/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:00.189" endtime="20201214 10:59:01.364"></status>
+<status status="PASS" starttime="20201218 19:20:00.989" endtime="20201218 19:20:01.776"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[4]/div/div/div[2]/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:01.366" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[4]/div/div/div[2]/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:01.366" endtime="20201214 10:59:01.442"></status>
+<msg timestamp="20201218 19:20:01.778" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[4]/div/div/div[2]/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:01.777" endtime="20201218 19:20:01.847"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -893,15 +903,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:01.442" endtime="20201214 10:59:02.165"></status>
+<status status="PASS" starttime="20201218 19:20:01.848" endtime="20201218 19:20:02.463"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:02.167" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:02.167" endtime="20201214 10:59:02.294"></status>
+<msg timestamp="20201218 19:20:02.464" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:02.464" endtime="20201218 19:20:02.642"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -909,36 +919,36 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div[1]/div[1]/div[1]/div[3]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:02.296" endtime="20201214 10:59:02.806"></status>
+<status status="PASS" starttime="20201218 19:20:02.643" endtime="20201218 19:20:03.116"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div[1]/div[1]/div[1]/div[3]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:02.807" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div[1]/div[1]/div[1]/div[3]'.</msg>
-<status status="PASS" starttime="20201214 10:59:02.807" endtime="20201214 10:59:02.882"></status>
+<msg timestamp="20201218 19:20:03.117" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[3]/div[2]/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div[1]/div[1]/div[1]/div[3]'.</msg>
+<status status="PASS" starttime="20201218 19:20:03.117" endtime="20201218 19:20:03.187"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:03.889" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:02.883" endtime="20201214 10:59:03.889"></status>
+<msg timestamp="20201218 19:20:04.189" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:03.188" endtime="20201218 19:20:04.189"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_get.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:04.248" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get.png"&gt;&lt;img src="test_get.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:03.891" endtime="20201214 10:59:04.248"></status>
+<msg timestamp="20201218 19:20:04.554" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get.png"&gt;&lt;img src="test_get.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:04.192" endtime="20201218 19:20:04.554"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:58:38.292" endtime="20201214 10:59:04.249" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:19:42.623" endtime="20201218 19:20:04.556" critical="yes"></status>
 </test>
 <test id="s1-t9" name="Test POST">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -947,15 +957,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:04.259" endtime="20201214 10:59:04.279"></status>
+<status status="PASS" starttime="20201218 19:20:04.566" endtime="20201218 19:20:04.587"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:04.280" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:04.280" endtime="20201214 10:59:04.378"></status>
+<msg timestamp="20201218 19:20:04.594" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:04.593" endtime="20201218 19:20:04.690"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -963,15 +973,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:04.379" endtime="20201214 10:59:05.114"></status>
+<status status="PASS" starttime="20201218 19:20:04.691" endtime="20201218 19:20:05.218"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div</arg>
 </arguments>
-<msg timestamp="20201214 10:59:05.117" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div'.</msg>
-<status status="PASS" starttime="20201214 10:59:05.117" endtime="20201214 10:59:05.298"></status>
+<msg timestamp="20201218 19:20:05.220" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div'.</msg>
+<status status="PASS" starttime="20201218 19:20:05.219" endtime="20201218 19:20:05.403"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -979,36 +989,36 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:05.299" endtime="20201214 10:59:05.332"></status>
+<status status="PASS" starttime="20201218 19:20:05.406" endtime="20201218 19:20:05.431"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:05.333" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:05.333" endtime="20201214 10:59:05.434"></status>
+<msg timestamp="20201218 19:20:05.431" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:05.431" endtime="20201218 19:20:05.514"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:06.440" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:05.435" endtime="20201214 10:59:06.440"></status>
+<msg timestamp="20201218 19:20:06.517" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:05.515" endtime="20201218 19:20:06.518"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_post.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:06.773" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_post.png"&gt;&lt;img src="test_post.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:06.442" endtime="20201214 10:59:06.773"></status>
+<msg timestamp="20201218 19:20:06.858" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_post.png"&gt;&lt;img src="test_post.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:06.519" endtime="20201218 19:20:06.858"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:04.258" endtime="20201214 10:59:06.774" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:04.563" endtime="20201218 19:20:06.859" critical="yes"></status>
 </test>
 <test id="s1-t10" name="Test GET after POST">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -1017,15 +1027,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:06.783" endtime="20201214 10:59:06.806"></status>
+<status status="PASS" starttime="20201218 19:20:06.869" endtime="20201218 19:20:06.894"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:06.811" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:06.811" endtime="20201214 10:59:06.917"></status>
+<msg timestamp="20201218 19:20:06.895" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:06.895" endtime="20201218 19:20:07.008"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1033,36 +1043,36 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:06.918" endtime="20201214 10:59:06.960"></status>
+<status status="PASS" starttime="20201218 19:20:07.008" endtime="20201218 19:20:07.051"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:06.961" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:06.961" endtime="20201214 10:59:07.017"></status>
+<msg timestamp="20201218 19:20:07.052" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:07.052" endtime="20201218 19:20:07.107"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:08.025" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:07.017" endtime="20201214 10:59:08.025"></status>
+<msg timestamp="20201218 19:20:08.109" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:07.108" endtime="20201218 19:20:08.109"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_get_post.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:08.384" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_post.png"&gt;&lt;img src="test_get_post.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:08.027" endtime="20201214 10:59:08.384"></status>
+<msg timestamp="20201218 19:20:08.453" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_post.png"&gt;&lt;img src="test_get_post.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:08.110" endtime="20201218 19:20:08.454"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:06.783" endtime="20201214 10:59:08.385" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:06.867" endtime="20201218 19:20:08.455" critical="yes"></status>
 </test>
 <test id="s1-t11" name="Test PUT">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -1071,15 +1081,15 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:08.395" endtime="20201214 10:59:08.410"></status>
+<status status="PASS" starttime="20201218 19:20:08.465" endtime="20201218 19:20:08.481"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:08.411" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:08.411" endtime="20201214 10:59:08.531"></status>
+<msg timestamp="20201218 19:20:08.487" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[7]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:08.487" endtime="20201218 19:20:08.590"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1087,15 +1097,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:08.532" endtime="20201214 10:59:09.244"></status>
+<status status="PASS" starttime="20201218 19:20:08.591" endtime="20201218 19:20:09.077"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:09.245" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]'.</msg>
-<status status="PASS" starttime="20201214 10:59:09.245" endtime="20201214 10:59:09.408"></status>
+<msg timestamp="20201218 19:20:09.077" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]'.</msg>
+<status status="PASS" starttime="20201218 19:20:09.077" endtime="20201218 19:20:09.235"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1103,36 +1113,36 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:09.409" endtime="20201214 10:59:09.442"></status>
+<status status="PASS" starttime="20201218 19:20:09.235" endtime="20201218 19:20:09.265"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:09.443" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:09.443" endtime="20201214 10:59:09.504"></status>
+<msg timestamp="20201218 19:20:09.266" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[4]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:09.266" endtime="20201218 19:20:09.329"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:10.511" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:09.504" endtime="20201214 10:59:10.511"></status>
+<msg timestamp="20201218 19:20:10.330" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:09.329" endtime="20201218 19:20:10.330"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_put.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:10.869" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_put.png"&gt;&lt;img src="test_put.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:10.513" endtime="20201214 10:59:10.869"></status>
+<msg timestamp="20201218 19:20:10.701" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_put.png"&gt;&lt;img src="test_put.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:10.333" endtime="20201218 19:20:10.702"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:08.393" endtime="20201214 10:59:10.870" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:08.463" endtime="20201218 19:20:10.703" critical="yes"></status>
 </test>
 <test id="s1-t12" name="Test GET after PUT">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -1141,15 +1151,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[9]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:10.881" endtime="20201214 10:59:10.903"></status>
+<status status="PASS" starttime="20201218 19:20:10.712" endtime="20201218 19:20:10.736"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[9]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:10.905" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[9]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:10.904" endtime="20201214 10:59:11.010"></status>
+<msg timestamp="20201218 19:20:10.738" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[9]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:10.737" endtime="20201218 19:20:10.830"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1157,36 +1167,36 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:11.011" endtime="20201214 10:59:11.052"></status>
+<status status="PASS" starttime="20201218 19:20:10.831" endtime="20201218 19:20:10.881"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:11.053" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:11.053" endtime="20201214 10:59:11.110"></status>
+<msg timestamp="20201218 19:20:10.882" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:10.882" endtime="20201218 19:20:10.945"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:12.114" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:11.111" endtime="20201214 10:59:12.114"></status>
+<msg timestamp="20201218 19:20:11.947" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:10.946" endtime="20201218 19:20:11.947"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_get_put.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:12.448" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_put.png"&gt;&lt;img src="test_get_put.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:12.116" endtime="20201214 10:59:12.448"></status>
+<msg timestamp="20201218 19:20:12.283" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_put.png"&gt;&lt;img src="test_get_put.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:11.948" endtime="20201218 19:20:12.283"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:10.878" endtime="20201214 10:59:12.450" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:10.711" endtime="20201218 19:20:12.284" critical="yes"></status>
 </test>
 <test id="s1-t13" name="Test DELETE">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -1195,15 +1205,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[8]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:12.459" endtime="20201214 10:59:12.482"></status>
+<status status="PASS" starttime="20201218 19:20:12.294" endtime="20201218 19:20:12.319"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[8]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:12.490" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[8]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:12.489" endtime="20201214 10:59:12.609"></status>
+<msg timestamp="20201218 19:20:12.321" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[8]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:12.320" endtime="20201218 19:20:12.431"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1211,15 +1221,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:12.610" endtime="20201214 10:59:13.131"></status>
+<status status="PASS" starttime="20201218 19:20:12.432" endtime="20201218 19:20:12.956"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div</arg>
 </arguments>
-<msg timestamp="20201214 10:59:13.132" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div'.</msg>
-<status status="PASS" starttime="20201214 10:59:13.132" endtime="20201214 10:59:13.310"></status>
+<msg timestamp="20201218 19:20:12.957" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[3]/div[1]/div[1]/div[1]/div/div[1]/div/div[4]/div'.</msg>
+<status status="PASS" starttime="20201218 19:20:12.956" endtime="20201218 19:20:13.134"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1227,36 +1237,36 @@ Without any arguments.</msg>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:13.312" endtime="20201214 10:59:13.337"></status>
+<status status="PASS" starttime="20201218 19:20:13.135" endtime="20201218 19:20:13.156"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:13.341" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:13.341" endtime="20201214 10:59:13.418"></status>
+<msg timestamp="20201218 19:20:13.157" level="INFO">Clicking element 'xpath://html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[5]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:13.157" endtime="20201218 19:20:13.256"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:14.427" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:13.419" endtime="20201214 10:59:14.427"></status>
+<msg timestamp="20201218 19:20:14.258" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:13.257" endtime="20201218 19:20:14.259"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_delete.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:14.752" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_delete.png"&gt;&lt;img src="test_delete.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:14.429" endtime="20201214 10:59:14.752"></status>
+<msg timestamp="20201218 19:20:14.598" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_delete.png"&gt;&lt;img src="test_delete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:14.260" endtime="20201218 19:20:14.598"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:12.458" endtime="20201214 10:59:14.754" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:12.292" endtime="20201218 19:20:14.599" critical="yes"></status>
 </test>
 <test id="s1-t14" name="Test GET after DELETE">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
@@ -1265,15 +1275,15 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[11]/div/div/div[2]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:14.764" endtime="20201214 10:59:14.788"></status>
+<status status="PASS" starttime="20201218 19:20:14.609" endtime="20201218 19:20:14.637"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[11]/div/div/div[2]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:14.790" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[11]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20201214 10:59:14.789" endtime="20201214 10:59:14.897"></status>
+<msg timestamp="20201218 19:20:14.638" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[11]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20201218 19:20:14.638" endtime="20201218 19:20:14.761"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -1281,42 +1291,42 @@ Without any arguments.</msg>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 <arg>timeout=20s</arg>
 </arguments>
-<status status="PASS" starttime="20201214 10:59:14.897" endtime="20201214 10:59:14.941"></status>
+<status status="PASS" starttime="20201218 19:20:14.762" endtime="20201218 19:20:14.805"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]</arg>
 </arguments>
-<msg timestamp="20201214 10:59:14.942" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
-<status status="PASS" starttime="20201214 10:59:14.942" endtime="20201214 10:59:15.002"></status>
+<msg timestamp="20201218 19:20:14.806" level="INFO">Clicking element 'xpath:/html/body/div[3]/div/div/div[5]/div[1]/div[1]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div/div/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20201218 19:20:14.806" endtime="20201218 19:20:14.871"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20201214 10:59:16.005" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20201214 10:59:15.003" endtime="20201214 10:59:16.005"></status>
+<msg timestamp="20201218 19:20:15.873" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201218 19:20:14.871" endtime="20201218 19:20:15.873"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
 <arguments>
 <arg>test_get_delete.png</arg>
 </arguments>
-<msg timestamp="20201214 10:59:16.348" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_delete.png"&gt;&lt;img src="test_get_delete.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201214 10:59:16.007" endtime="20201214 10:59:16.348"></status>
+<msg timestamp="20201218 19:20:16.220" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_get_delete.png"&gt;&lt;img src="test_get_delete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201218 19:20:15.875" endtime="20201218 19:20:16.220"></status>
 </kw>
 <kw name="Close Window" library="SeleniumLibrary">
 <doc>Closes currently opened and selected browser window/tab.</doc>
-<status status="PASS" starttime="20201214 10:59:16.349" endtime="20201214 10:59:16.416"></status>
+<status status="PASS" starttime="20201218 19:20:16.221" endtime="20201218 19:20:16.295"></status>
 </kw>
 <tags>
 <tag>Postman + Wamp</tag>
 </tags>
-<status status="PASS" starttime="20201214 10:59:14.762" endtime="20201214 10:59:16.416" critical="yes"></status>
+<status status="PASS" starttime="20201218 19:20:14.607" endtime="20201218 19:20:16.297" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201214 10:56:24.305" endtime="20201214 10:59:16.423"></status>
+<status status="PASS" starttime="20201218 19:17:29.327" endtime="20201218 19:20:16.309"></status>
 </suite>
 <statistics>
 <total>
