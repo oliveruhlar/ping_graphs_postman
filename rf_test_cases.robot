@@ -87,7 +87,7 @@ Test GET
     Wait Until Page Contains Element  xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a  timeout=20s
     Click Element  xpath://*[@id="gatsby-focus-wrapper"]/main/nav/ul/li/a
     Wait Until Page Contains Element  id:username  timeout=20s
-    Input Text  id:username  mekkyzbirka@gmail.com
+    Input Text  id:username  robotpostmantests
     ${paswd} =	 decoding  ${hash_pass}
     Input Text  id:password  ${paswd}
 
